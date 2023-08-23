@@ -12,7 +12,9 @@ import Pug from './pug';
  * @returns {Pug}
  */
 function addMethod(pugObject) {
-    // TODO Finish the function
+    pugObject.speak = function() {
+        return "woof!";
+    }
 }
 
 
@@ -24,7 +26,14 @@ function addMethod(pugObject) {
  * @param {Pug} pugObject 
  */
 function listOutProperties(pugObject) {
-    // TODO Finish the function
+    pugObject.listProperties = function() {
+        let str = "";
+        for(let prop in pugObject) {
+            str += pugObject[prop];
+        }
+        return str;
+    }
+    return pugObject;
 }
 
 /**
@@ -36,7 +45,10 @@ function listOutProperties(pugObject) {
  * @returns {Pug}
  */
 function addFindDogYears(pugObject) {
-    // TODO Finish the function
+    pugObject.findDogYears = function() {
+        return pugObject.age * 7;
+    }
+    return pugObject;
 }
 
 
@@ -47,7 +59,7 @@ function addFindDogYears(pugObject) {
  * @returns {String[]}
  */
 function tryObjectValues(pugObject) {
-    // TODO Finish the function
+    return Object.values(pugObject);
 }
 
 /**
@@ -58,7 +70,7 @@ function tryObjectValues(pugObject) {
  * @returns {String}
  */
 function functionToString(pugObject) {
-    // TODO Finish the function
+    return JSON.stringify(pugObject.breathHeavy().toString())
 }
 
 

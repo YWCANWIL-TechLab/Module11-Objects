@@ -7,7 +7,13 @@
  * @returns {Object} 
  */
 function writeNormalPersonObject() {
-    // TODO Finish the function
+    const person = {
+        firstName: "Joel",
+        lastName: "Gill",
+        age: 19, 
+        height: "6 foot 9 inches"
+    };
+    return person;
 }
 
 
@@ -19,7 +25,7 @@ function writeNormalPersonObject() {
  * @returns
  */
 function accessPersonObjectNormally(person) {
-    // TODO Finish the function
+    return person["age"];
 }
 
 
@@ -30,7 +36,17 @@ function accessPersonObjectNormally(person) {
  * @returns {Object}
  */
 function writeGetPersonObject() {
-    // TODO Finish the function
+    const joel = {
+        firstName: "Joel",
+        lastName: "Gill",
+        age: 19,
+        height: "6 foot 9 inches",
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`;
+            // return this.firstName + " " + this.lastName;
+        }
+    };
+    return joel;
 }
 
 
@@ -42,7 +58,7 @@ function writeGetPersonObject() {
  * @returns {Object}
  */
 function accessGetPersonObject(person) {
-    // TODO Finish the function
+    return person.fullName;
 }
 
 
@@ -54,7 +70,8 @@ function accessGetPersonObject(person) {
  * @returns {Object}
  */
 function changePropertyNormally(person) {
-    // TODO Finish the function
+    person.lastName = "Gills";
+    return person;
 }
 
 
@@ -65,7 +82,20 @@ function changePropertyNormally(person) {
  * @returns {Object}
  */
 function writeSetPersonObject() {
-    // TODO Finish the function
+    const joel = {
+        firstName: "Joel",
+        lastName: "Gill",
+        age: 19,
+        height: "6 foot 9 inches",
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`;
+            // return this.firstName + " " + this.lastName;
+        },
+        set setAge(age) {
+            this.age = age;
+        }
+    };
+    return joel;
 }
 
 
@@ -77,12 +107,6 @@ function writeSetPersonObject() {
  * @returns {Object}
  */
 function useSetPersonObject(person) {
-    // TODO Finish the function
+    person.setAge = 18;
+    return person;
 }
-
-
-
-
-
-
-

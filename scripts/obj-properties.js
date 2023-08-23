@@ -14,6 +14,11 @@ import {Pug} from './pug.js';
  */
 function loopThroughProperties(object) {
     // TODO Finish the function
+    let str = "";
+    for(let property in object) {
+        str += object[property];
+    }
+    return str;
 }
 
 
@@ -25,7 +30,10 @@ function loopThroughProperties(object) {
  * @returns {Object}
  */
 function addProperties(object) {
-    // TODO Finish the function
+    object.color = "blue";
+    object.weight = "250 lbs";
+    object.age = 20;
+    return object;
 }
 
 
@@ -36,8 +44,10 @@ function addProperties(object) {
  * @param {Pug} Pug - A Pug Object with a few properties. You can find out more about this object in pug.js
  * @returns {Pug}
  */
-function removeProperties(object) {
+function removeProperties(pug) {
     // TODO Finish the function
+    delete pug.ugly;
+    return pug;
 }
 
 
@@ -49,6 +59,7 @@ function removeProperties(object) {
  */
 function getAttributes(object) {
     // TODO Finish the function
+    return Object.getOwnPropertyDescriptors(object);
 }
 
 
